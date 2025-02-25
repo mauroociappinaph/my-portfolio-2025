@@ -5,6 +5,7 @@ import { Pacifico } from "next/font/google"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
 import Navbar from "./Navbar"
+import { HeroProps } from "../types/interfaces"
 
 const pacifico = Pacifico({
   subsets: ["latin"],
@@ -12,28 +13,22 @@ const pacifico = Pacifico({
   variable: "--font-pacifico",
 })
 
-export default function HeroGeometric({
-  badge = "Kokonut UI",
-  title1 = "Mauro Ciappina",
-  title2 = "Digital Vision",
-}: {
-  badge?: string
-  title1?: string
-  title2?: string
-}) {
-  const fadeUpVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: (i: number) => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 1,
-        delay: 0.5 + i * 0.2,
-        ease: [0.25, 0.4, 0.25, 1],
-      },
-    }),
-  }
+const fadeUpVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      delay: 0.5 + i * 0.2,
+      ease: [0.25, 0.4, 0.25, 1],
+    },
+  }),
+}
 
+
+
+export default function Hero({ badge = "", title1 = "Mauro Ciappina", title2 = "Full Stack Developer" }: HeroProps) {
   return (
     <>
       <Navbar />
