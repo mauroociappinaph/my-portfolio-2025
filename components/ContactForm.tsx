@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Mail, MapPin, Phone, Send, Loader2 } from "lucide-react"
+import { Mail, MapPin, Send, Loader2 } from "lucide-react"
 
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -33,8 +33,8 @@ export default function Contact() {
 const onSubmit = async () => {
     setIsSubmitting(true)
     try {
-        // Here you would typically send the form data to your backend
-        await new Promise((resolve) => setTimeout(resolve, 1000)) // Simulate API call
+
+        await new Promise((resolve) => setTimeout(resolve, 1000))
         setSubmitSuccess(true)
         reset()
         setTimeout(() => setSubmitSuccess(false), 3000)
@@ -76,19 +76,19 @@ const onSubmit = async () => {
                   className="flex items-center text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
                 >
                   <Mail className="w-6 h-6 mr-3 text-blue-600" />
-                  musmanzafar53@gmail.com
+                  ciappinamauro@gmail.com
                 </a>
                 <a
                   href="tel:+923055356766"
                   className="flex items-center text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
                 >
-                  <Phone className="w-6 h-6 mr-3 text-blue-600" />
-                  +92-305-5356766
-                </a>
+
+
                 <div className="flex items-center text-gray-600 dark:text-gray-300">
                   <MapPin className="w-6 h-6 mr-3 text-blue-600" />
-                  Lahore, Pakistan
+                  Argentina, Mar del Plata
                 </div>
+                </a>
               </div>
             </div>
           </motion.div>
@@ -103,7 +103,7 @@ const onSubmit = async () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                    Name
+                    Nombre
                   </label>
                   <input
                     {...register("name")}
@@ -130,7 +130,7 @@ const onSubmit = async () => {
               </div>
               <div className="mt-6">
                 <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                  Subject
+                  Asunto
                 </label>
                 <input
                   {...register("subject")}
@@ -143,7 +143,7 @@ const onSubmit = async () => {
               </div>
               <div className="mt-6">
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                  Message
+                  Mensaje
                 </label>
                 <textarea
                   {...register("message")}
@@ -163,12 +163,12 @@ const onSubmit = async () => {
                   }`}
                 >
                   {isSubmitting ? <Loader2 className="w-5 h-5 animate-spin mr-2" /> : <Send className="w-5 h-5 mr-2" />}
-                  {isSubmitting ? "Sending..." : "Send Message"}
+                  {isSubmitting ? "Enviando..." : "Enviar mensaje"}
                 </button>
               </div>
               {submitSuccess && (
                 <div className="mt-4 p-4 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 rounded-md">
-                  Message sent successfully!
+                  Mensaje enviado correctamente!
                 </div>
               )}
             </form>

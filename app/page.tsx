@@ -6,6 +6,7 @@ import ContactForm from "@/components/ContactForm";
 import AnimatedMenuWidget from "@/components/animated-menu-widget";
 import AboutMe from "../components/AboutMe";
 import Footer from "../components/Footer";
+import MyResume from "../components/myResume";
 //import { Starfield } from "../components/Starfield";
 
 export default function Home() {
@@ -18,7 +19,8 @@ export default function Home() {
       {/* About Me Section */}
       <AboutMe />
 
-
+{/* My Resume Section */}
+<MyResume />
 
 {/* Header Section */}
       <Header />

@@ -47,12 +47,12 @@ export default function Hero({ badge = "", title1 = "Mauro Ciappina", title2 = "
             </motion.div>
 
             <motion.div custom={1} variants={fadeUpVariants} initial="hidden" animate="visible">
-              <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold mb-6 md:mb-8 tracking-tight">
+              <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold mb-6 md:mb-8 tracking-tight max-w-[80%] mx-auto">
                 <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80">{title1}</span>
                 <br />
                 <span
                   className={cn(
-                    "bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 via-white/90 to-rose-300 ",
+                    "whitespace-nowrap bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 via-white/90 to-rose-300 ",
                     pacifico.className,
                   )}
                 >
@@ -63,7 +63,7 @@ export default function Hero({ badge = "", title1 = "Mauro Ciappina", title2 = "
 
             <motion.div custom={2} variants={fadeUpVariants} initial="hidden" animate="visible">
               <p className="text-base sm:text-lg md:text-xl text-white/40 mb-8 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
-                Crafting exceptional digital experiences through innovative design and cutting-edge technology.
+                Creando experiencias digitales excepcionales a través de un diseño innovador y tecnología de vanguardia.
               </p>
             </motion.div>
           </div>
